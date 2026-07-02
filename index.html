@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Baby ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#FFD54F;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+}
+
+h1{
+font-size:38px;
+margin-bottom:15px;
+}
+
+h2{
+font-size:28px;
+color:#ff1493;
+margin-bottom:40px;
+}
+
+button{
+padding:15px 40px;
+font-size:22px;
+border:none;
+border-radius:15px;
+cursor:pointer;
+transition:.3s;
+}
+
+#yes{
+background:#ff1493;
+color:white;
+margin-right:20px;
+}
+
+#yes:hover{
+transform:scale(1.1);
+}
+
+#no{
+background:white;
+position:absolute;
+}
+
+#result{
+display:none;
+}
+
+#result img{
+width:260px;
+margin-top:20px;
+border-radius:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Will You Be My Girlfriend? ❤️</h1>
+
+<h2>Baby 💖</h2>
+
+<div id="buttons">
+<button id="yes">Yes 💖</button>
+<button id="no">No 😅</button>
+</div>
+
+<div id="result">
+<h1>Yay!! ❤️</h1>
+<h2>I Love You So Much Baby 🥹💖</h2>
+
+<img src="https://media.tenor.com/5iV_h2M4Hq8AAAAC/cat-kiss.gif">
+</div><script>
+const yes=document.getElementById("yes");
+const no=document.getElementById("no");
+const result=document.getElementById("result");
+const buttons=document.getElementById("buttons");
+
+no.addEventListener("mouseover",()=>{
+const x=Math.random()*(window.innerWidth-120);
+const y=Math.random()*(window.innerHeight-60);
+no.style.position="absolute";
+no.style.left=x+"px";
+no.style.top=y+"px";
+});
+
+yes.onclick=function(){
+buttons.style.display="none";
+result.style.display="block";
+};
+</script>
+
+</body>
+  </html>
